@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our 3 Months Anniversary 💗</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #fff5f7;
+            color: #6b3b4b;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg,
+                    #ffe0e9,
+                    #fff5f7,
+                    #fce1ff);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .heart {
+            font-size: 75px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3.5rem);
+            margin: 20px 0;
+            color: #d6336c;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 550px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 30px;
+            padding: 13px 26px;
+            margin: 12px 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        #yes-btn {
+            transition: transform 0.3s ease;
+        }
+
+        #yes-btn.giant {
+            font-size: 28px;
+            padding: 20px 50px;
+            border-radius: 20px;
+            background: #ff4d88;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 25px rgba(255, 77, 136, 0.6);
+            cursor: pointer;
+        }
+
+        .pink-btn {
+            background: #e64980;
+            color: white;
+            box-shadow: 0 5px 15px #e6498040;
+        }
+
+        .white-btn {
+            background: white;
+            color: #d6336c;
+            border: 2px solid #f3a6bd;
+        }
+
+        .giant {
+            position: relative;
+            z-index: 10;
+            transform: scale(1.5);
+            margin: 35px 15px;
+            box-shadow: 0 0 30px #e6498060;
+        }
+
+        section {
+            padding: 65px 20px;
+        }
+
+        h2 {
+            color: #d6336c;
+            font-size: clamp(1.7rem, 5vw, 2.3rem);
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 22px;
+            box-shadow: 0 8px 25px #a8325c12;
+            line-height: 1.9;
+        }
+
+        .memories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+                    minmax(min(100%, 220px), 1fr));
+            gap: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .memory {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 18px;
+            box-shadow: 0 6px 20px #a8325c10;
+        }
+
+        .memory .emoji {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .memory h3 {
+            color: #d6336c;
+            margin-bottom: 8px;
+        }
+
+        .question {
+            background: #ffe3ec;
+        }
+
+        #noMessage {
+            min-height: 55px;
+            max-width: 500px;
+            margin: 15px auto;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 600;
+        }
+
+        #surprise {
+            display: none;
+            animation: appear 0.8s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .surprise-heart {
+            font-size: 55px;
+            animation: heartbeat 1s infinite;
+        }
+
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            pointer-events: none;
+            z-index: 20;
+            animation: floatUp 4s linear forwards;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        footer {
+            padding: 25px 15px;
+            background: #fbd5e2;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 22px 17px;
+            }
+
+            .giant {
+                transform: scale(1.15);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header>
+        <div class="heart">💗</div>
+
+        <h1>Happy 3 Months, Kalyar yay</h1>
+
+        <p>
+            Three months of beautiful memories,
+            countless smiles, and a special person
+            who makes my days brighter. 💕
+        </p>
+
+        <button class="btn pink-btn" onclick="document.getElementById('letter').scrollIntoView()">
+            Open My Letter 💌
+        </button>
+    </header>
+
+    <!-- LOVE LETTER -->
+
+    <section id="letter">
+        <h2>A Letter For You 💌</h2>
+
+        <div class="card">
+            <p>My Dearest Kalyar, 💗</p>
+
+            <p>
+                ကိုယ်တို့နှစ်ယောက်ရဲ့ ၃ လပြည့်လေး
+                ပျော်ရွှင်ပါစေ၊ အချစ်ရေ။
+                ဒီသုံးလတာက ကျ၀်ဘဝရဲ့ လှပတဲ့
+                အစိတ်အပိုင်းလေးတစ်ခု ဖြစ်လာခဲ့တယ်။
+            </p>
+
+            <p>
+                ကျ၀်အတွက် ထူးခြားပြီး အရေးပါတဲ့သူတစ်ယောက်
+                ဖြစ်ပေးလို့ ကျေးဇူးတင်ပါတယ်။
+                ကျ၀်တို့နှစ်ယောက် အဝေးမှာရှိနေကြရင်တောင်
+                မင်းက ကျ၀်နှလုံးသားထဲမှာ အထူးနေရာလေးတစ်ခု
+                အမြဲရှိနေတယ်
+            </p>
+
+            <p>
+                ကျ၀်တို့နှစ်ယောက် အတူတူသင်ယူရင်း၊
+                တိုးတက်ရင်း၊ တစ်ယောက်ကိုတစ်ယောက်
+                အားပေးကူညီရင်း လှပတဲ့အမှတ်တရလေးတွေ
+                အများကြီး ဆက်လက်ဖန်တီးသွားနိုင်ဖို့
+                မျှော်လင့်ပါတယ်
+            </p>
+
+            <p>
+                ဒီ Website လေးက ကလျာအတွက်
+                ကျ၀်ပေးချင်တဲ့ လက်ဆောင်လေးတစ်ခုပါ
+                မင်းတစ်ယောက်တည်းအတွက်
+                ကိုယ်အချစ်တွေနဲ့ ဖန်တီးထားတာလေးပါ။ 🥹💗
+            </p>
+
+            <p>
+                တို့နှစ်ယောက်ရဲ့ ၃ လပြည့်လေး
+                ပျော်ရွှင်ပါစေ။ 💕
+            </p>
+
+            <p>
+                <strong>With love, always. ❤️</strong>
+                <br>
+                <strong>Yours, Min Myat Thar 💗</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- YES OR NO -->
+    <section class="question">
+        <h2>မေးခွန်းလေးတစ်ခုလောက် မေးချင်လို့ပါကလျာရေ... 🥺💗</h2>
+
+        <div class="card">
+            <h3 id="questionText">
+                ကိုယ်နဲ့အတူ လှပတဲ့အမှတ်တရလေးတွေကို ဆက်ပြီး ဖန်တီးသွားပေးမလားဟင်... 💗🌷
+            </h3>
+
+            <div style="margin-top: 25px;">
+                <button id="yes-btn" class="btn pink-btn" onclick="sayYes()">
+                    Yes! 💖
+                </button>
+
+                <button id="no-btn" class="btn white-btn" onclick="sayNo()">
+                    No 🙈
+                </button>
+            </div>
+
+            <p id="noMessage" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <!-- SURPRISE -->
+    <section id="surprise">
+        <div class="surprise-heart">💖</div>
+
+        <h2>ဟေးးး! ကျ၀်ကို Yes လို့ ဖြေပေးလိုက်ပြီပေါ့နော်! 🥹</h2>
+
+        <div class="card">
+            <p>
+                ကလျာရေ၊ ကလျာကလေ ကျ၀်ဘဝဇာတ်လမ်းထဲမှာ အရေးပါတဲ့သူတစ်ယောက်ပါ ကျ၀်တို့နှစ်ယောက်
+                ဒီလိုလှပတဲ့အမှတ်တရလေးတွေကို ကလျာနဲ့အတူတူမျှဝေနိုင်တာ ကျ၀်အရမ်းဝမ်းသာတယ် ကလျာနဲ့အတူ ကုန်ဆုံးခဲ့တဲ့
+                အချိန်လေးတိုင်းက ကျ၀်ဘဝရဲ့ အထူးခြားဆုံးအမှတ်တရလေးတွေပါနော် နောက်ထပ်အမှတ်တရလှလှလေးတွေလည်း
+                ကလျာနဲ့အတူ အများကြီး ဖန်တီးသွားချင်တယ်။ 💗
+            </p>
+
+            <p>
+                ကိုယ်တို့နှစ်ယောက်ရဲ့ ၃ လပြည့်လေးမှသည် ရှေ့ဆက်လျှောက်လှမ်းရမယ့် နေ့ရက်တိုင်းမှာလည်း
+                ပျော်ရွှင်စရာအမှတ်တရလေးတွေ အများကြီး အတူတူဖန်တီးသွားကြမယ်နော် ကလျာ 🌷💗
+            </p>
+
+            <h3 style="margin-top: 20px; color: #d6336c;">
+                ကလျာ အတွက် ဒီအမှတ်တရလေးတွေကို ဖန်တီးခဲ့တယ်။ 💕
+            </h3>
+        </div>
+
+        <button class="btn pink-btn" onclick="makeHearts()">
+            More Love! 💗
+        </button>
+    </section>
+
+    <footer>
+        Made with love 💗 | Our 3 Months Anniversary
+    </footer>
+
+<script>
+    let noCount = 0;
+
+    const messages = [
+        "သေချာရဲ့လား ကလျာ? 🥺💗",
+        "ကျ၀် ကို အခွင့်အရေးလေးပေးပါဦးကွယ်? 🌷",
+        "မချစ်တော့ဘူးလား ကလျာ? 🥹",
+        "ကလျာ အရမ်းရက်စက်တာပဲ 😭",
+        "သေချာရဲ့လား ကလျာ? 🥺💗",
+        "ကျ၀် ကို မချစ်တော့ဘူးလား ကလျာ? 🥹",
+        "ကျ၀် တောင်းပန်ပါတယ် Yes ကို နှိပ်လေနော် 🥺💖",
+        "ကျ၀်နဲ့ အတူတူ အမှတ်တရတွေ ဖန်တီးကြမယ်လေနော် 🌷",
+        "Yes ကို နှိပ်လေနော် 🥺💖",
+        "ကျ၀်ကို မချစ်တော့ဘူးလား ကလျာ? 🥹",
+        "Okay လေ Yes လို့ နှိပ်မလား 💗"
+    ];
+
+    function sayNo() {
+        noCount++;
+
+        const message = document.getElementById("noMessage");
+        const yesButton = document.getElementById("yes-btn");
+        const noButton = document.getElementById("no-btn");
+
+        const index = Math.min(noCount - 1, messages.length - 1);
+
+        message.textContent = messages[index];
+
+        if (noCount >= 11) {
+            yesButton.classList.add("giant");
+            yesButton.textContent = "YES 💖";
+            yesButton.style.transform = "scale(1.8)";
+            noButton.style.display = "none";
+        } else {
+            yesButton.style.transform =
+                `scale(${1 + noCount * 0.12})`;
+        }
+    }
+
+    function sayYes() {
+        const surprise = document.getElementById("surprise");
+
+        surprise.style.display = "block";
+        surprise.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        makeHearts();
+    }
+
+    function makeHearts() {
+        const symbols = ["💗", "💕", "💖", "💘", "🌸"];
+
+        for (let i = 0; i < 25; i++) {
+            const heart = document.createElement("span");
+
+            heart.className = "floating-heart";
+            heart.textContent =
+                symbols[Math.floor(Math.random() * symbols.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize =
+                (18 + Math.random() * 22) + "px";
+
+            heart.style.animationDuration =
+                (3 + Math.random() * 3) + "s";
+
+            document.body.appendChild(heart);
+
+            heart.addEventListener("animationend", () => {
+                heart.remove();
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
